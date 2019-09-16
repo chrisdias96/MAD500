@@ -4,6 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "generate": "ng generate",
+    "gc": "ng generate component",
+    "gp": "ng generate pipe",
+    "gd": "ng generate directive",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
