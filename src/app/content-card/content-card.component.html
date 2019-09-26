@@ -1,5 +1,9 @@
-<span [innerHTML]="contentList.getPicData(0) | safe"></span>
-<span [innerHTML]="contentList.getPicData(1) | safe"></span>
-<span [innerHTML]="contentList.getPicData(2) | safe"></span>
-
-
+<article>
+  <img (click)="click(content)" alt="content image" src="{{ content.imgUrl }}"/>
+  <p> <strong>Body:</strong> {{ content.body }}</p>
+  <strong>Author:</strong> {{ content.author }}
+  <br/>
+  <strong>Type:</strong> {{ content.type }}
+  <br/>
+  <span *ngIf="content.tags.length > 0"> <strong>Tags:</strong> {{ content.tags }} </span>
+</article>
