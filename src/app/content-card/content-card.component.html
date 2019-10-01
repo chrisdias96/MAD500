@@ -1,9 +1,9 @@
-<article>
+<article class="itemContent">
   <img (click)="click(content)" alt="content image" src="{{ content.imgUrl }}"/>
   <p> <strong>Body:</strong> {{ content.body }}</p>
   <strong>Author:</strong> {{ content.author }}
   <br/>
-  <strong>Type:</strong> {{ content.type }}
-  <br/>
+  <div><strong>Type:</strong> {{ content.type }}</div>
   <span *ngIf="content.tags.length > 0"> <strong>Tags:</strong> {{ content.tags }} </span>
 </article>
+

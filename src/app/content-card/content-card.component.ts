@@ -12,6 +12,7 @@ export class ContentCardComponent implements OnInit {
   @Input() content: Content;
   @Input() index: number;
   @Input() last: boolean;
+  title: string;
 
   constructor() {
   }

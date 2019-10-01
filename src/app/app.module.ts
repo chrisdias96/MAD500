@@ -5,16 +5,20 @@ import { AppComponent } from './app.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { SafePipe } from './safe.pipe';
 import { ContentListComponent } from './content-list/content-list.component';
+import {ContentTaggedPipe} from './content-tagged.pipe';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentCardComponent,
     SafePipe,
-    ContentListComponent
+    ContentListComponent,
+    ContentTaggedPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,30 @@
 
 app-content-card {
+  /*margin: 10px;*/
+  /*display: block;*/
+  /*border: green solid 1px;*/
+  /*padding: 5px;*/
+  /*width: max-content;*/
+}
+
+.firstSet {
   margin: 10px;
   display: block;
-  border: gray solid 1px;
+  border: green solid 3px;
   padding: 5px;
   width: max-content;
 }
+
+.secondSet {
+  margin: 10px;
+  display: block;
+  border: blue solid 3px;
+  padding: 5px;
+  width: max-content;
+}
+
 .is-last {
-  border: black solid 2px;
+  /*border: black solid 2px;*/
 }
 
 
