@@ -24,6 +24,8 @@ export class ContentCardComponent implements OnInit {
     console.log('Content ID: ' + content.contentId);
   }
 
+
+
 }
 
 

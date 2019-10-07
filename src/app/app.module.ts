@@ -7,6 +7,7 @@ import { SafePipe } from './safe.pipe';
 import { ContentListComponent } from './content-list/content-list.component';
 import {ContentTaggedPipe} from './content-tagged.pipe';
 import {FormsModule} from '@angular/forms';
+import { TextDecorationDirective } from './text-decoration.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {FormsModule} from '@angular/forms';
     ContentCardComponent,
     SafePipe,
     ContentListComponent,
-    ContentTaggedPipe
+    ContentTaggedPipe,
+    TextDecorationDirective
   ],
   imports: [
     BrowserModule,
