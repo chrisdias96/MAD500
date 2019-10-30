@@ -8,6 +8,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import {ContentTaggedPipe} from './content-tagged.pipe';
 import {FormsModule} from '@angular/forms';
 import { TextDecorationDirective } from './text-decoration.directive';
+import { CreateContentComponent } from './create-content/create-content.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TextDecorationDirective } from './text-decoration.directive';
     SafePipe,
     ContentListComponent,
     ContentTaggedPipe,
-    TextDecorationDirective
+    TextDecorationDirective,
+    CreateContentComponent
   ],
   imports: [
     BrowserModule,

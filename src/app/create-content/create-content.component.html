@@ -1,0 +1,22 @@
+<div class="create-your-own-content">
+  <h2>Add your own Content</h2>
+  <label for="title">*Title</label><br>
+  <input id="title" name="title" [(ngModel)]="title"/>
+  <br>
+  <label for="author">*Author</label><br>
+  <input id="author" name="author" [(ngModel)]="author"/>
+  <br/>
+  <label for="body">*Body</label><br>
+  <input id="body" name="body" [(ngModel)]="body"/>
+  <br/>
+  <label for="imageURL">Image URL</label><br>
+  <input id="imageURL" name="imageURL" [(ngModel)]="imageURL">
+  <br/>
+  <label for="tags">Tags</label><br>
+  <input id="tags" name="tags" [(ngModel)]="tags"/>
+  <br/>
+  <button id="submit" name="submit" (click)="addContentToArray()">Submit</button>
+  <br>
+  {{ submitContentResults }}
+</div>
+

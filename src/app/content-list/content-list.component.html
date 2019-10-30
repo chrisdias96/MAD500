@@ -1,6 +1,7 @@
 <!--<app-content-card *ngFor="let item of contentList; last as isLast" [content]="item" [class.is-last]="isLast"></app-content-card>-->
+<app-create-content [contentList]="contentList"></app-create-content>
 <h1> Set 1 </h1>
-<p>Enter the author of a Content item</p>
+<p>Enter the title of a Content item</p>
 <input #search> <button (click)="searchTitle(search.value)">Submit</button>
 <p>{{ searchedResult }}</p>
 <app-content-card class="firstSet" *ngFor="let item of (contentList | filterType: 'News' ); index as i; last as isLast" [content]="item" [class.is-last]="isLast"></app-content-card>
