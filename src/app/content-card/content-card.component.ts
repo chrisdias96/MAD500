@@ -1,5 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Content} from './content-card-helper';
+import {ContentService} from '../services/content.service';
+import {Observable, of} from 'rxjs';
+import { MessageService } from '../message.service';
 
 // @ts-ignore
 @Component({
@@ -10,14 +13,28 @@ import {Content} from './content-card-helper';
 
 export class ContentCardComponent implements OnInit {
   @Input() content: Content;
+  @Input() contentList: Content[];
+  @Input() contentItem: Content;
   @Input() index: number;
-  @Input() last: boolean;
+  @Input() last: boolea
   title: string;
 
-  constructor() {
+  constructor(private contentService: ContentService) {
   }
 
   ngOnInit(): void {
+  }
+
+  save(): void {
+    this.contentService.addContent(this.contentItem)
+      .subscribe(content => {
+        this.contentList.push(content);
+        console.log("After: ", this.contentList);
+      });
+  }
+  update(): void {
+    this.contentService.updateContent(this.contentItem)
+      .subscribe(_ => console.log("Content updated"));
   }
 
   public click(content: Content) {

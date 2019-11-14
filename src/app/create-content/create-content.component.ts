@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {async} from '@angular/core/testing';
 import {Content} from '../content-card/content-card-helper';
+import {ContentService} from '../services/content.service';
 
 @Component({
   selector: 'app-create-content',
@@ -17,7 +18,7 @@ export class CreateContentComponent implements OnInit {
   @Input() tags: string;
   private submitContentResults: string;
 
-  constructor() { }
+  constructor(private contentService: ContentService) { }
 
   ngOnInit() {
   }

@@ -9,6 +9,11 @@ import {ContentTaggedPipe} from './content-tagged.pipe';
 import {FormsModule} from '@angular/forms';
 import { TextDecorationDirective } from './text-decoration.directive';
 import { CreateContentComponent } from './create-content/create-content.component';
+import { MessagesComponent } from './messages/messages.component';
+
+import { HttpClientModule} from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import { InMemoryDataService} from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -18,11 +23,15 @@ import { CreateContentComponent } from './create-content/create-content.componen
     ContentListComponent,
     ContentTaggedPipe,
     TextDecorationDirective,
-    CreateContentComponent
+    CreateContentComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,5 +10,6 @@
   <br/>
   <div><strong>Type:</strong> {{ content.type }}</div>
   <span *ngIf="content.tags.length > 0"> <strong>Tags:</strong> {{ content.tags }} </span>
+  <button (click)="save()">Update</button> <button (click)="save()">Delete</button>
 </article>
 
